@@ -1,0 +1,98 @@
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid orange;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+input, textarea {
+    display: block;
+    margin-bottom: 1em;
+    border: 1px solid orange;
+}
+
+label {
+    display: block;
+}
+
+.line1, .footer {
+    margin-top: 30px;
+    border-top: 1px solid orange;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.header, .line1, .mobile {
+    display: none;
+}
+
+.desktop {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Phones */
+
+@media screen and (min-device-width: 320px) and (orientation: portrait) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}
+
+/* Tablet */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    label {
+        float: left;
+        padding-right: 0.5em;
+        text-align: right;
+        width: 8em;
+    }
+    .line1 {
+        display: block;
+    }
+    .header {
+        display: block;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .header-item {
+        background: orange;
+        border-radius: 8px;
+        padding: 8px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .desktop {
+        display: block;
+    }
+    .mobile {
+        display: none;
+    }
+}
+
+/* Desktop */
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+    .desktop {
+        display: block;
+    }
+}
